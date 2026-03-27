@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Enki Pulse</string>
+    <string name="accessibility_description">Enki Pulse uses accessibility to track which apps and websites you use, sending activity data to your private Enki server. No data is shared with third parties.</string>
+</resources>
