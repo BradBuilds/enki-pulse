@@ -166,7 +166,7 @@ fun DashboardScreen(
             )
         }
         Text(
-            prefs.serverUrl.ifBlank { "https://pulse.dev" },
+            prefs.serverUrl.ifBlank { "Not connected" },
             modifier = Modifier.padding(top = 16.dp, start = 4.dp),
             color = Color.Gray,
             fontSize = 14.sp

@@ -182,16 +182,6 @@ fun QrPairingScreen(
 
             Spacer(modifier = Modifier.weight(1f))
 
-            TextButton(onClick = { 
-                // BYPASS PAIRING (Simulator/UI Testing Only)
-                prefs.savePairing("https://pulse.dev", "sim_token", "simulator_agent", "default")
-                onPaired()
-            }) {
-                Text("DEBUG: BYPASS PAIRING", color = MaterialTheme.colorScheme.primary.copy(alpha = 0.5f), fontSize = 10.sp)
-            }
-
-            Spacer(modifier = Modifier.height(8.dp))
-
             TextButton(onClick = { showManualEntry = true }) {
                 Text("MANUAL CONFIGURATION", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 11.sp, fontWeight = FontWeight.Bold)
             }
