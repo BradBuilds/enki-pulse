@@ -25,7 +25,10 @@ class EnkiApiClient(private val prefs: EnkiPrefs) {
     private val JSON_TYPE = "application/json; charset=utf-8".toMediaType()
     private val OCTET_TYPE = "application/octet-stream".toMediaType()
 
-    private fun baseUrl(): String = prefs.serverUrl.trimEnd('/')
+    private fun baseUrl(): String {
+        val url = prefs.serverUrl.trimEnd('/')
+        return if (url.endsWith("/api")) url else "$url/api"
+    }
 
     private fun Request.Builder.addEnkiHeaders(): Request.Builder = this
         .addHeader("X-Device-ID", prefs.deviceId)
